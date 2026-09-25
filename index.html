@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MagarPlay | Estudio Indie de Videojuegos Arcade</title>
+	<meta name="description" content="MagarPlay es un estudio independiente de desarrollo de videojuegos arcade para dispositivos móviles y web. Creadores de GoalFlap.">
+	<meta name="keywords" content="MagarPlay, GoalFlap, videojuegos arcade, indie games, juegos godot, juegos móviles sin anuncios, futbol arcade">
+	<meta name="author" content="MagarPlay Studio">
+	<link rel="canonical" href="https://magarplay.com/">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://magarplay.com/">
+	<meta property="og:title" content="MagarPlay | Estudio Indie de Videojuegos Arcade">
+	<meta property="og:description" content="Desarrollo independiente de videojuegos arcade modernos, pulidos y adictivos. Creadores de GoalFlap.">
+	<meta property="og:image" content="https://magarplay.com/images/feature_graphic.png">
+
+	<!-- Twitter Cards -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="MagarPlay | Estudio Indie de Videojuegos Arcade">
+	<meta name="twitter:description" content="Desarrollo independiente de videojuegos arcade modernos, pulidos y adictivos. Creadores de GoalFlap.">
+	<meta name="twitter:image" content="https://magarplay.com/images/feature_graphic.png">
+
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="images/icon_512.png">
+	<link rel="apple-touch-icon" href="images/icon_512.png">
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+	<!-- Stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<!-- Particle Interactive Background Canvas -->
+	<canvas id="particles-canvas"></canvas>
+
+	<!-- Ambient Colored Glow Orbs -->
+	<div class="ambient-glow ambient-top-left"></div>
+	<div class="ambient-glow ambient-center-right"></div>
+	<div class="ambient-glow ambient-bottom-left"></div>
+
+	<!-- ==========================================================================
+	     NAVBAR
+	     ========================================================================== -->
+	<header class="site-header" id="header">
+		<div class="container nav-wrapper">
+			<a href="#" class="brand-link" aria-label="MagarPlay Inicio">
+				<img src="images/magarplay_logo.png" alt="MagarPlay Logo" class="brand-logo">
+			</a>
+
+			<nav aria-label="Navegación principal">
+				<ul class="nav-links" id="nav-links">
+					<li><a href="#games" data-i18n="nav_games">Juegos</a></li>
+					<li><a href="#upcoming" data-i18n="nav_upcoming">Próximamente</a></li>
+					<li><a href="#about" data-i18n="nav_about">El Estudio</a></li>
+					<li><a href="#contact" data-i18n="nav_contact">Contacto</a></li>
+				</ul>
+			</nav>
+
+			<div class="nav-actions">
+				<button class="lang-toggle-btn" id="lang-toggle" aria-label="Cambiar Idioma">
+					<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+						<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+					</svg>
+					<span class="lang-label">EN</span>
+				</button>
+
+				<button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú móvil">
+					<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<line x1="3" y1="12" x2="21" y2="12"></line>
+						<line x1="3" y1="6" x2="21" y2="6"></line>
+						<line x1="3" y1="18" x2="21" y2="18"></line>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</header>
+
+	<!-- ==========================================================================
+	     HERO SECTION
+	     ========================================================================== -->
+	<section class="hero-section" id="hero">
+		<div class="container">
+			<div class="studio-pill">
+				<span>⚡</span>
+				<span data-i18n="hero_badge">Estudio Indie de Videojuegos</span>
+			</div>
+
+			<h1 class="hero-title">
+				<span data-i18n="hero_title">Creando Experiencias Arcade Inolvidables</span>
+			</h1>
+
+			<p class="hero-subtitle" data-i18n="hero_subtitle">
+				Desarrollamos videojuegos arcade modernos, pulidos y adictivos. Diseñados con pasión, física precisa y respeto total por la privacidad del jugador.
+			</p>
+
+			<div class="hero-cta-group">
+				<a href="#games" class="btn btn-primary" data-i18n="hero_btn_explore">Explorar Juegos</a>
+				<a href="https://magarplay.github.io/GoalFlap/play/" target="_blank" rel="noopener" class="btn btn-gold" data-i18n="hero_btn_demo">🎮 Probar Demo Online</a>
+			</div>
+
+			<!-- Stats Banner -->
+			<div class="hero-stats">
+				<div class="stat-item">
+					<div class="stat-icon">🛡️</div>
+					<div class="stat-text">
+						<strong data-i18n="stat_no_ads">Sin Anuncios Abusivos</strong>
+						<span data-i18n="stat_no_ads_sub">100% Diversión y Enfoque</span>
+					</div>
+				</div>
+				<div class="stat-item">
+					<div class="stat-icon">⚡</div>
+					<div class="stat-text">
+						<strong data-i18n="stat_fps">Rendimiento 60 FPS</strong>
+						<span data-i18n="stat_fps_sub">Motor Godot 4 Optimizado</span>
+					</div>
+				</div>
+				<div class="stat-item">
+					<div class="stat-icon">📱</div>
+					<div class="stat-text">
+						<strong data-i18n="stat_multiplatform">Móvil y Web</strong>
+						<span data-i18n="stat_multiplatform_sub">Juega Donde Quieras</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ==========================================================================
+	     FEATURED GAME SECTION (GOALFLAP)
+	     ========================================================================== -->
+	<section class="section" id="games">
+		<div class="container">
+			<div class="section-header">
+				<span class="section-tag" data-i18n="sec_games_tag">Catálogo Oficial</span>
+				<h2 class="section-title gradient-text-cyan" data-i18n="sec_games_title">Nuestros Videojuegos</h2>
+				<p class="section-desc" data-i18n="sec_games_desc">Títulos listos para jugar, disfrutar y competir por las mejores marcas.</p>
+			</div>
+
+			<!-- Featured Card: GoalFlap -->
+			<div class="featured-game-card">
+				<div class="game-grid">
+					<!-- Left Column: Visual Media -->
+					<div class="game-media-col">
+						<div class="game-media-wrapper">
+							<img src="images/feature_graphic.png" alt="GoalFlap Portada Oficial" class="game-banner-img">
+						</div>
+						<!-- Gameplay Thumbnails -->
+						<div class="game-thumbs-row">
+							<div class="game-thumb-item">
+								<img src="images/screenshots/screenshot_1_menu.png" alt="GoalFlap Menú" loading="lazy">
+							</div>
+							<div class="game-thumb-item">
+								<img src="images/screenshots/screenshot_2_gameplay.png" alt="GoalFlap Partida" loading="lazy">
+							</div>
+							<div class="game-thumb-item">
+								<img src="images/screenshots/screenshot_3_collectibles.png" alt="GoalFlap Coleccionables" loading="lazy">
+							</div>
+							<div class="game-thumb-item">
+								<img src="images/screenshots/screenshot_4_gameover.png" alt="GoalFlap Game Over" loading="lazy">
+							</div>
+						</div>
+					</div>
+
+					<!-- Right Column: Game Information -->
+					<div class="game-info-col">
+						<div class="game-badges-row">
+							<span class="badge badge-gold" data-i18n="game_badge_featured">Lanzamiento Destacado</span>
+							<span class="badge badge-cyan" data-i18n="game_badge_tech">Godot 4</span>
+							<span class="badge badge-gray" data-i18n="game_badge_offline">100% Offline</span>
+						</div>
+
+						<h3 class="game-title">GoalFlap</h3>
+						<div class="game-tagline" data-i18n="game_tagline">¡Desafío Arcade de Fútbol Flapper 2D!</div>
+						<p class="game-description" data-i18n="game_desc">
+							Controla el balón con un solo toque y esquiva postes, silbatos y tarjetas rojas en el estadio más vibrante. Rompe récords, recoge balones de oro y vive el fútbol con una jugabilidad tan adictiva como desafiante.
+						</p>
+
+						<ul class="game-highlights">
+							<li><span>✔</span> <span data-i18n="feat_controls">Controles One-Touch ultrasensibles</span></li>
+							<li><span>✔</span> <span data-i18n="feat_referee">Mecánicas de árbitro y tarjetas</span></li>
+							<li><span>✔</span> <span data-i18n="feat_time">Registro de tiempo y récords</span></li>
+							<li><span>✔</span> <span data-i18n="feat_privacy">Sin telemetría ni micropagos</span></li>
+						</ul>
+
+						<div class="game-actions-row">
+							<a href="https://magarplay.github.io/GoalFlap/play/" target="_blank" rel="noopener" class="btn btn-gold" data-i18n="btn_play_demo">🎮 Jugar Demo Web Gratis</a>
+							<a href="https://magarplay.github.io/GoalFlap/" target="_blank" rel="noopener" class="btn btn-secondary" data-i18n="btn_game_details">📱 Conocer Más y Descargar</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ==========================================================================
+	     UPCOMING PIPELINE SECTION
+	     ========================================================================== -->
+	<section class="section" id="upcoming">
+		<div class="container">
+			<div class="section-header">
+				<span class="section-tag" data-i18n="sec_upcoming_tag">El Futuro</span>
+				<h2 class="section-title gradient-text-gold" data-i18n="sec_upcoming_title">Próximos Proyectos</h2>
+				<p class="section-desc" data-i18n="sec_upcoming_desc">El catálogo de MagarPlay está en constante evolución con nuevos géneros y desafíos.</p>
+			</div>
+
+			<div class="pipeline-grid">
+				<!-- Project 1 -->
+				<div class="pipeline-card">
+					<div class="pipeline-card-glow glow-purple"></div>
+					<span class="pipeline-badge pipeline-badge-dev" data-i18n="pipe1_badge">En Producción • 2026</span>
+					<h3 class="pipeline-title" data-i18n="pipe1_title">Proyecto Striker X</h3>
+					<p class="pipeline-desc" data-i18n="pipe1_desc">
+						Un arcade deportivo y táctico con estética retro-futurista de alta velocidad. Mecánicas de reflejos extremos para Android y PC.
+					</p>
+					<div class="pipeline-platforms" data-i18n="pipe1_platforms">
+						Android • Steam • Web
+					</div>
+				</div>
+
+				<!-- Project 2 -->
+				<div class="pipeline-card">
+					<div class="pipeline-card-glow glow-cyan"></div>
+					<span class="pipeline-badge pipeline-badge-lab" data-i18n="pipe2_badge">I+D Indie</span>
+					<h3 class="pipeline-title" data-i18n="pipe2_title">MagarPlay Labs</h3>
+					<p class="pipeline-desc" data-i18n="pipe2_desc">
+						Espacio de experimentación y prototipado rápido donde probamos mecánicas innovadoras directamente en tu navegador web.
+					</p>
+					<div class="pipeline-platforms" data-i18n="pipe2_platforms">
+						Web HTML5 • Móvil
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ==========================================================================
+	     ABOUT & PHILOSOPHY SECTION
+	     ========================================================================== -->
+	<section class="section" id="about">
+		<div class="container">
+			<div class="section-header">
+				<span class="section-tag" data-i18n="sec_about_tag">Nuestra Filosofía</span>
+				<h2 class="section-title" data-i18n="sec_about_title">¿Por Qué MagarPlay?</h2>
+				<p class="section-desc" data-i18n="sec_about_desc">Diseñamos videojuegos con los estándares que a nosotros como jugadores nos apasionan.</p>
+			</div>
+
+			<!-- Pillars Grid -->
+			<div class="pillars-grid" style="margin-bottom: 60px;">
+				<div class="pillar-card">
+					<div class="pillar-icon-box">🎯</div>
+					<h3 class="pillar-title" data-i18n="pillar1_title">Jugabilidad Pura</h3>
+					<p class="pillar-desc" data-i18n="pillar1_desc">
+						Sin tutoriales aburridos ni mecánicas de relleno. Fácil de aprender, desafiante de dominar y divertido desde el primer segundo.
+					</p>
+				</div>
+
+				<div class="pillar-card">
+					<div class="pillar-icon-box">🛡️</div>
+					<h3 class="pillar-title" data-i18n="pillar2_title">Privacidad y Ética</h3>
+					<p class="pillar-desc" data-i18n="pillar2_desc">
+						Cero recolección de datos personales, sin publicidad invasiva ni prácticas abusivas. Juegos seguros y respetuosos.
+					</p>
+				</div>
+
+				<div class="pillar-card">
+					<div class="pillar-icon-box">⚡</div>
+					<h3 class="pillar-title" data-i18n="pillar3_title">Rendimiento Veloz</h3>
+					<p class="pillar-desc" data-i18n="pillar3_desc">
+						Construidos sobre Godot Engine para arrancar instantáneamente, consumir poca batería y correr a 60 FPS estables.
+					</p>
+				</div>
+			</div>
+
+			<!-- Studio Story Card & Contact Form -->
+			<div class="about-card" id="contact">
+				<div class="about-text">
+					<h3 class="gradient-text-cyan" data-i18n="about_studio_title">Pasión por los Arcades</h3>
+					<p data-i18n="about_studio_p1">
+						MagarPlay nace de la convicción de que los mejores videojuegos son aquellos que te atrapan al instante con mecánicas ingeniosas, diseño sonoro gratificante y estética retro-moderna.
+					</p>
+					<p data-i18n="about_studio_p2">
+						Con sede en Colombia y alcance global, creamos experiencias compactas pero de altísima calidad para que disfrutes en tus ratos libres, ya sea en tu smartphone o en tu navegador favorito.
+					</p>
+				</div>
+
+				<div class="contact-box">
+					<h4 data-i18n="contact_title">¿Quieres saludarnos?</h4>
+					<p data-i18n="contact_desc">Para sugerencias, soporte de nuestros juegos o colaboraciones de prensa, escríbenos directamente:</p>
+					<a href="mailto:contacto@magarplay.com" class="contact-email-btn" data-i18n="contact_btn">
+						✉ contacto@magarplay.com
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ==========================================================================
+	     FOOTER
+	     ========================================================================== -->
+	<footer class="site-footer">
+		<div class="container">
+			<div class="footer-top">
+				<div class="footer-brand">
+					<img src="images/magarplay_logo.png" alt="MagarPlay" style="height: 38px; width: auto;">
+					<p data-i18n="footer_desc">Estudio independiente de desarrollo de videojuegos. Pasión arcade, jugabilidad pura y respeto al jugador.</p>
+				</div>
+
+				<div class="footer-nav">
+					<div class="footer-col">
+						<h5 data-i18n="footer_games">Juegos</h5>
+						<ul>
+							<li><a href="https://magarplay.github.io/GoalFlap/" target="_blank" rel="noopener">GoalFlap</a></li>
+							<li><a href="https://magarplay.github.io/GoalFlap/play/" target="_blank" rel="noopener">GoalFlap (Demo Web)</a></li>
+						</ul>
+					</div>
+					<div class="footer-col">
+						<h5 data-i18n="footer_studio">Estudio</h5>
+						<ul>
+							<li><a href="#about" data-i18n="nav_about">El Estudio</a></li>
+							<li><a href="#upcoming" data-i18n="nav_upcoming">Próximamente</a></li>
+							<li><a href="#contact" data-i18n="nav_contact">Contacto</a></li>
+						</ul>
+					</div>
+					<div class="footer-col">
+						<h5 data-i18n="footer_legal">Legal</h5>
+						<ul>
+							<li><a href="privacy.html" data-i18n="footer_privacy">Política de Privacidad</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-bottom">
+				<div>
+					&copy; 2026 <strong>MagarPlay Studio</strong>. <span data-i18n="footer_rights">Todos los derechos reservados.</span>
+				</div>
+				<div>
+					Hecho con pasión indie ⚽🚀
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="js/main.js"></script>
+</body>
+</html>
