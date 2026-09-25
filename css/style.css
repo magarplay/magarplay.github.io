@@ -506,20 +506,44 @@ h1, h2, h3, h4 {
 	transform: scale(1.03);
 }
 
-/* Gameplay Screenshots Grid */
+/* Gameplay Screenshots Grid (Vertical Mobile Screens 9:16) */
 .game-thumbs-row {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 12px;
-	margin-top: 14px;
+	margin-top: 16px;
 }
 
 .game-thumb-item {
 	border-radius: var(--radius-sm);
 	overflow: hidden;
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	aspect-ratio: 16/9;
-	background: #000;
+	border: 1.5px solid rgba(255, 255, 255, 0.12);
+	aspect-ratio: 9 / 16;
+	background: #070b16;
+	cursor: pointer;
+	position: relative;
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+	transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+}
+
+.game-thumb-item::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(circle at center, rgba(0, 240, 255, 0.2) 0%, transparent 75%);
+	opacity: 0;
+	transition: opacity 0.25s ease;
+	pointer-events: none;
+}
+
+.game-thumb-item:hover {
+	transform: translateY(-5px) scale(1.03);
+	border-color: var(--accent-cyan);
+	box-shadow: 0 10px 24px rgba(0, 240, 255, 0.35);
+}
+
+.game-thumb-item:hover::after {
+	opacity: 1;
 }
 
 .game-thumb-item img {
@@ -527,11 +551,11 @@ h1, h2, h3, h4 {
 	height: 100%;
 	object-fit: cover;
 	display: block;
-	transition: var(--transition-smooth);
+	transition: transform 0.35s ease;
 }
 
 .game-thumb-item:hover img {
-	transform: scale(1.08);
+	transform: scale(1.05);
 }
 
 /* Info Column */
@@ -1053,4 +1077,78 @@ h1, h2, h3, h4 {
 	.legal-header h1 {
 		font-size: 1.8rem;
 	}
+}
+
+/* ==========================================================================
+   LIGHTBOX MODAL FOR SCREENSHOTS
+   ========================================================================== */
+.screenshot-modal {
+	position: fixed;
+	inset: 0;
+	background: rgba(3, 5, 12, 0.92);
+	backdrop-filter: blur(16px);
+	z-index: 9999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.28s ease;
+	padding: 20px;
+}
+
+.screenshot-modal.open {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.modal-content {
+	position: relative;
+	max-height: 90vh;
+	max-width: 90vw;
+	border-radius: var(--radius-md);
+	overflow: hidden;
+	border: 2px solid rgba(0, 240, 255, 0.4);
+	box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(0, 240, 255, 0.25);
+	transform: scale(0.9);
+	transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+	background: #000;
+}
+
+.screenshot-modal.open .modal-content {
+	transform: scale(1);
+}
+
+.modal-content img {
+	max-height: 85vh;
+	width: auto;
+	max-width: 100%;
+	display: block;
+	object-fit: contain;
+}
+
+.modal-close-btn {
+	position: absolute;
+	top: 24px;
+	right: 28px;
+	background: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	color: #fff;
+	font-size: 2.2rem;
+	line-height: 1;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.2s ease;
+	z-index: 10000;
+}
+
+.modal-close-btn:hover {
+	background: rgba(255, 70, 70, 0.85);
+	border-color: rgba(255, 70, 70, 1);
+	transform: scale(1.1);
 }

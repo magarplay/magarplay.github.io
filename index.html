@@ -150,19 +150,19 @@
 						<div class="game-media-wrapper">
 							<img src="images/feature_graphic.png" alt="GoalFlap Portada Oficial" class="game-banner-img">
 						</div>
-						<!-- Gameplay Thumbnails -->
+						<!-- Gameplay Thumbnails (Portrait 9:16) -->
 						<div class="game-thumbs-row">
-							<div class="game-thumb-item">
-								<img src="images/screenshots/screenshot_1_menu.png" alt="GoalFlap Menú" loading="lazy">
+							<div class="game-thumb-item" data-full="images/screenshots/screenshot_1_menu.png" title="Ver captura completa">
+								<img src="images/screenshots/screenshot_1_menu.png" alt="GoalFlap Menú Principal" loading="lazy">
 							</div>
-							<div class="game-thumb-item">
-								<img src="images/screenshots/screenshot_2_gameplay.png" alt="GoalFlap Partida" loading="lazy">
+							<div class="game-thumb-item" data-full="images/screenshots/screenshot_2_gameplay.png" title="Ver captura completa">
+								<img src="images/screenshots/screenshot_2_gameplay.png" alt="GoalFlap Partido en Acción" loading="lazy">
 							</div>
-							<div class="game-thumb-item">
-								<img src="images/screenshots/screenshot_3_collectibles.png" alt="GoalFlap Coleccionables" loading="lazy">
+							<div class="game-thumb-item" data-full="images/screenshots/screenshot_3_collectibles.png" title="Ver captura completa">
+								<img src="images/screenshots/screenshot_3_collectibles.png" alt="GoalFlap Coleccionables y Árbitro" loading="lazy">
 							</div>
-							<div class="game-thumb-item">
-								<img src="images/screenshots/screenshot_4_gameover.png" alt="GoalFlap Game Over" loading="lazy">
+							<div class="game-thumb-item" data-full="images/screenshots/screenshot_4_gameover.png" title="Ver captura completa">
+								<img src="images/screenshots/screenshot_4_gameover.png" alt="GoalFlap Fin del Partido y Récords" loading="lazy">
 							</div>
 						</div>
 					</div>
@@ -346,6 +346,14 @@
 			</div>
 		</div>
 	</footer>
+
+		<!-- Lightbox Modal for Full Screenshots -->
+	<div id="screenshot-modal" class="screenshot-modal" aria-hidden="true">
+		<button class="modal-close-btn" id="modal-close-btn" aria-label="Cerrar vista">&times;</button>
+		<div class="modal-content">
+			<img src="" alt="Captura de pantalla de GoalFlap" id="modal-img">
+		</div>
+	</div>
 
 	<!-- Scripts -->
 	<script src="js/main.js"></script>

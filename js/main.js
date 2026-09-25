@@ -342,10 +342,58 @@ function initMobileMenu() {
 }
 
 // ==========================================================================
+// LIGHTBOX MODAL FOR SCREENSHOTS
+// ==========================================================================
+function initLightbox() {
+	const modal = document.getElementById('screenshot-modal');
+	const modalImg = document.getElementById('modal-img');
+	const closeBtn = document.getElementById('modal-close-btn');
+	const thumbItems = document.querySelectorAll('.game-thumb-item');
+	
+	if (!modal || !modalImg) return;
+	
+	thumbItems.forEach(item => {
+		item.addEventListener('click', () => {
+			const fullSrc = item.getAttribute('data-full') || item.querySelector('img')?.src;
+			if (fullSrc) {
+				modalImg.src = fullSrc;
+				modal.classList.add('open');
+				modal.setAttribute('aria-hidden', 'false');
+				document.body.style.overflow = 'hidden';
+			}
+		});
+	});
+	
+	function closeModal() {
+		modal.classList.remove('open');
+		modal.setAttribute('aria-hidden', 'true');
+		document.body.style.overflow = '';
+	}
+	
+	if (closeBtn) {
+		closeBtn.addEventListener('click', closeModal);
+	}
+	
+	modal.addEventListener('click', (e) => {
+		if (e.target === modal || e.target === closeBtn) {
+			closeModal();
+		}
+	});
+	
+	document.addEventListener('keydown', (e) => {
+		if (e.key === 'Escape' && modal.classList.contains('open')) {
+			closeModal();
+		}
+	});
+}
+
+// ==========================================================================
 // INITIALIZATION ON DOM READY
 // ==========================================================================
 document.addEventListener('DOMContentLoaded', () => {
 	initLanguage();
 	initParticles();
 	initMobileMenu();
+	initLightbox();
 });
+
