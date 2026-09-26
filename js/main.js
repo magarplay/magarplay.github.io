@@ -17,7 +17,7 @@ const translations = {
 		hero_title: "Creando Experiencias Arcade Inolvidables",
 		hero_subtitle: "Desarrollamos videojuegos arcade modernos, pulidos y adictivos. Diseñados con pasión, física precisa y respeto total por la privacidad del jugador.",
 		hero_btn_explore: "Explorar Juegos",
-		hero_btn_demo: "🎮 Probar Demo Online",
+		hero_btn_demo: "🎮 Jugar GoalFlap Online",
 		
 		stat_no_ads: "Sin Anuncios Abusivos",
 		stat_no_ads_sub: "100% Diversión y Enfoque",
@@ -41,7 +41,8 @@ const translations = {
 		feat_time: "Registro de tiempo y récords",
 		feat_privacy: "Sin telemetría ni micropagos",
 		
-		btn_play_demo: "🎮 Jugar Demo Web Gratis",
+		btn_play_demo: "🎮 Jugar en Línea (Web)",
+		btn_game_itch: "👾 Disponible en Itch.io",
 		btn_game_details: "📱 Conocer Más y Descargar",
 		
 		sec_upcoming_tag: "El Futuro",
@@ -103,7 +104,7 @@ const translations = {
 		hero_title: "Crafting Memorable Indie Arcade Experiences",
 		hero_subtitle: "We build modern, polished, and addictive arcade video games. Designed with passion, precise physics, and complete respect for player privacy.",
 		hero_btn_explore: "Explore Games",
-		hero_btn_demo: "🎮 Play Online Demo",
+		hero_btn_demo: "🎮 Play GoalFlap Online",
 		
 		stat_no_ads: "Zero Intrusive Ads",
 		stat_no_ads_sub: "100% Fun & Focus",
@@ -127,7 +128,8 @@ const translations = {
 		feat_time: "Match timer & record tracking",
 		feat_privacy: "Zero telemetry or paywalls",
 		
-		btn_play_demo: "🎮 Play Free Web Demo",
+		btn_play_demo: "🎮 Play Online (Web)",
+		btn_game_itch: "👾 Available on Itch.io",
 		btn_game_details: "📱 Learn More & Download",
 		
 		sec_upcoming_tag: "The Future",
